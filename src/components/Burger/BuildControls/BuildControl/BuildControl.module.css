@@ -2,8 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    margin: 5px auto;
-    width: 50%;
+    margin: 5px 0;
 }
 
 .BuildControl button {
