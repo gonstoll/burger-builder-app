@@ -8,11 +8,14 @@ const burger = props => {
     const ingredientsArray = Object.keys(props.ingredients);
     let ingredients = ingredientsArray
 		.map(ingredient => {
-			return [...Array(props.ingredients[ingredient])].map((_, i) => {
-				return <BurgerIngredient key={ingredient + i} type={ingredient} />
-			});
+            if (ingredient !== 'price') {
+                return [...Array(props.ingredients[ingredient])].map((_, i) => {
+                    return <BurgerIngredient key={ingredient + i} type={ingredient} />
+                });
+            }
+            return ingredient;
 		})
-		.reduce((arr, el) => arr.concat(el), []);
+        .reduce((arr, el) => arr.concat(el), []);
 
     if (ingredients.length === 0) {
         ingredients = <p>Please start adding ingredients!</p>;
