@@ -1,6 +1,15 @@
 body {
 	margin: 0;
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.route-wrapper {
+	position: relative;
+}
+
+.route-wrapper > div {
+    position: absolute;
+    width: 100%;
 }
